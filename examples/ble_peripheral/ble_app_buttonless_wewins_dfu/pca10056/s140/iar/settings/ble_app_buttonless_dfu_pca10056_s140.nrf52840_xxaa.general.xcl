@@ -1,0 +1,13 @@
+"E:\IAR8_30_2\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\bin\armproc.dll" 
+
+"E:\IAR8_30_2\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\bin\armjlink2.dll" 
+
+"E:\yanghao\nRF5_SDK_16.0.0_JIO\examples\ble_peripheral\ble_app_buttonless_wewins_dfu\pca10056\s140\iar\_build\ble_app_buttonless_dfu_pca10056_s140.out" 
+
+--plugin="E:\IAR8_30_2\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\bin\armbat.dll" 
+
+--device_macro="E:\IAR8_30_2\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\NordicSemi\nRF52.dmac" 
+
+
+
+
