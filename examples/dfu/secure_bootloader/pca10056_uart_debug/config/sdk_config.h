@@ -1047,7 +1047,7 @@
 // <i> FW version.
 
 #ifndef NRF_DFU_EXTERNAL_APP_VERSIONING
-#define NRF_DFU_EXTERNAL_APP_VERSIONING 0
+#define NRF_DFU_EXTERNAL_APP_VERSIONING 1
 #endif
 
 // <q> NRF_DFU_FORCE_DUAL_BANK_APP_UPDATES  - Accept only dual-bank application updates.
@@ -1067,7 +1067,7 @@
 // <i> It is checked against the hw_version value in the init packet
 
 #ifndef NRF_DFU_HW_VERSION
-#define NRF_DFU_HW_VERSION 82
+#define NRF_DFU_HW_VERSION 52
 #endif
 
 // <q> NRF_DFU_REQUIRE_SIGNED_APP_UPDATE  - Require a valid signature to update the application or SoftDevice.
