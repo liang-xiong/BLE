@@ -72,7 +72,7 @@
 
 #define HARDWARE_NUMBER                 "HW_1_0"
 #define SOFTWARE_NUMBER                 "SW_16_0_0"
-#define FIRMWARE_NUMBER                 "L_FW_1_0_9"
+#define FIRMWARE_NUMBER                 "L_FW_1_0_10"
 
 #define APP_BLE_CONN_CFG_TAG    1                                       /**< Tag that refers to the BLE stack configuration set with @ref sd_ble_cfg_set. The default tag is @ref BLE_CONN_CFG_TAG_DEFAULT. */
 #define APP_BLE_OBSERVER_PRIO   3                                       /**< BLE observer priority of the application. There is no need to modify this value. */
@@ -2033,6 +2033,14 @@ static void AT_cmd_handle(uint8_t *pBuffer, uint16_t length)
 			}
 		}
 		printf("AT+NAME?\r\n+NAME:NO NAME SET\r\nOK\r\n");
+	}
+//AT+SLEEP,主设备休眠
+	else if((length == strlen("AT+SLEEP\r\n"))&&(strncmp((char*)pBuffer, "AT+SLEEP", strlen("AT+SLEEP")) == 0))
+	{
+		app_uart_close();
+		nrf_drv_gpiote_in_event_enable(SENSOR_I2C_INT, false);
+		nrf_sdh_disable_request();
+		nrf_power_system_off();
 	}
 
 
