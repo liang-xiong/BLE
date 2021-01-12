@@ -69,6 +69,8 @@
 #include "nrf_log.h"
 #include "nrf_log_ctrl.h"
 #include "nrf_log_default_backends.h"
+#include "nrf_drv_gpiote.h"
+#include "nrf_power.h"
 
 #define HARDWARE_NUMBER                 "HW_1_0"
 #define SOFTWARE_NUMBER                 "SW_16_0_0"
@@ -2038,7 +2040,6 @@ static void AT_cmd_handle(uint8_t *pBuffer, uint16_t length)
 	else if((length == strlen("AT+SLEEP\r\n"))&&(strncmp((char*)pBuffer, "AT+SLEEP", strlen("AT+SLEEP")) == 0))
 	{
 		app_uart_close();
-		nrf_drv_gpiote_in_event_enable(SENSOR_I2C_INT, false);
 		nrf_sdh_disable_request();
 		nrf_power_system_off();
 	}
