@@ -1901,6 +1901,7 @@ static void AT_cmd_handle(uint8_t *pBuffer, uint16_t length)
 
 		int8_t txpwr_level;
 		sscanf((char *)pBuffer,"AT+TXPWR=%hhdrn",&txpwr_level);
+		//Supported tx_power values:-40dBm, -20dBm, -16dBm, -12dBm, -8dBm, -4dBm, 0dBm, +2dBm, +3dBm, +4dBm, +5dBm, +6dBm, +7dBm and +8dBm.
 		//ble_gap_evt_adv_report_t TX_POWER;
 		err_code = sd_ble_gap_tx_power_set(BLE_GAP_TX_POWER_ROLE_SCAN_INIT,BLE_CONN_HANDLE_INVALID,txpwr_level);
 		//printf("\r\nTXPWR=%d\r\n",TX_POWER.tx_power);
